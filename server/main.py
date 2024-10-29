@@ -11,7 +11,8 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000", 
-    "https://ducky.pics", 
+    "https://ducky.pics",
+    "https://auth-testing-five.vercel.app/"
 ]
 
 app.add_middleware(
