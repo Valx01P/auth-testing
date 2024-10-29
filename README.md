@@ -1,101 +1,61 @@
-# 🦆 Ducky
+# Ducky Project Backend
 
-Welcome to **Ducky**! 🖼️ A collaborative event photo-sharing platform designed for groups and communities to capture and share memories. Think of it as an album-first social experience, making it easy to create, share, and enjoy photo albums for every occasion. 📸
+## Setting up the Virtual Environment
 
-## 🚀 Project Overview
-Ducky is built to bring people together through shared albums. With features like album collaboration, role-based access, and image organization, it’s the perfect solution for event photo-sharing. Whether it’s a party, a vacation, or just a day out with friends, Ducky makes it simple and fun to relive the best moments together.
+### Windows
 
-## 🌐 Ducky Website
-Check out the live site here: [https://www.ducky.pics/](https://www.ducky.pics/)
+1. Navigate to the backend directory:
+   ```bash
+   cd Ducky/server/
+   ```
+2. Create a virtual environment:
+   ```bash
+   python3 -m venv venv
+   ```
+   or
+   ```bash
+   python -m venv venv
+   ```
+3. Activate the virtual environment:
+   ```bash
+   venv\Scripts\activate
+   ```
 
-## 🧑‍💻 Tech Stack
-Here’s a rundown of the technologies that power Ducky:
+### macOS/Linux
 
-- **Frontend**: [Next.js](https://nextjs.org/), **TypeScript**, **TailwindCSS**
-- **Backend**: [FastAPI](https://fastapi.tiangolo.com/), **Python**
-- **Authentication**: [Auth.js (formerly Next-Auth)](https://next-auth.js.org/)
-- **Database**: [Supabase](https://supabase.com/) (Postgres)
-- **Image Storage**: Supabase Storage Bucket
+1. Navigate to the backend directory:
+   ```bash
+   cd Ducky/server/
+   ```
+2. Create a virtual environment:
+   ```bash
+   python3 -m venv venv
+   ```
+3. Activate the virtual environment:
+   ```bash
+   source venv/bin/activate
+   ```
 
-## ✨ Features
-- **Sign Up & Login** with Google and Email authentication
-- **Home Page** to view and filter albums
-- **Create & Manage Albums** (public or private)
-- **Photo Upload & Sorting** with Supabase Storage
-- **Profile Management** with roles and permissions
-- **Admin Controls** for album privacy and user management
-- **Responsive Design** for a smooth experience on all devices
+## Leaving the Virtual Environment
 
-## 🛠️ Setup & Installation
-To get started with Ducky locally, follow these steps:
+To deactivate the virtual environment, type the following in your terminal:
 
-### 1. Clone the Repository
 ```bash
-git clone https://github.com/AlejandroV01/Ducky.git
-cd Ducky
+deactivate
 ```
 
-### 2. Install Dependencies
-For both frontend and backend, you'll need to install dependencies.
+## Installing Dependencies
 
-#### Frontend (Next.js)
-```bash
-cd client
-npm install
-```
+After activating the virtual environment, install all dependencies:
 
-#### Backend (FastAPI)
-First, set up a virtual environment, then install dependencies:
 ```bash
-cd server
-python3 -m venv env
-source env/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Configure Environment Variables
-To run Ducky, you need to configure the environment variables.
+## Starting the Server
 
-#### Frontend
-Create a `.env.local` file in the `/frontend` directory with the following:
+To active the server you may run the following command:
+
 ```bash
-N/A
+npm run server
 ```
-
-#### Backend
-Create a `.env` file in the `/backend` directory with the following:
-```bash
-SUPABASE_URL=your_supabase_database_url
-SUPABASE_KEY=your_supabase_storage_key
-```
-
-### 4. Run the Application
-#### Frontend (Next.js)
-```bash
-npm run dev
-```
-This will start the frontend server on `http://localhost:3000`.
-
-#### Backend (FastAPI)
-```bash
-uvicorn main:app --reload
-```
-This will start the backend server on `http://localhost:8000`.
-
-## 📋 Contributing
-We welcome contributions to make Ducky even better! Here’s how you can help:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/YourFeature`
-3. Commit your changes: `git commit -m 'Add YourFeature'`
-4. Push to the branch: `git push origin feature/YourFeature`
-5. Open a pull request
-
-For any questions or help, feel free to reach out via the Issues section.
-
-## 📞 Contact & Support
-For further questions or support, please reach out to the project maintainer at [alexvera0109@gmail.com](mailto:alexvera0109@gmail.com).
-
----
-
-Thank you for being a part of Ducky! 🎉 Together, let’s make sharing memories as easy and fun as possible. Happy coding! 💻🚀
