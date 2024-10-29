@@ -9,7 +9,7 @@ export default function Home() {
   const handleGet = async () => {
     setIsLoading(true)
     try {
-      const res = await fetch('http://127.0.0.1:8000/user', { method: 'GET' })
+      const res = await fetch('https://auth-testing-five.vercel.app/user', { method: 'GET' })
       if (!res.ok) throw new Error('Failed to fetch')
       console.log(await res.json())
     } catch (err) {
@@ -22,7 +22,7 @@ export default function Home() {
   const handleCheckUser = async () => {
     setIsLoading(true)
     try {
-      const res = await fetch('http://127.0.0.1:8000/check-user', {
+      const res = await fetch('https://auth-testing-five.vercel.app/check-user', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: 'johndoe' }),
@@ -43,7 +43,7 @@ export default function Home() {
       last_name: 'James',
     }
     try {
-      const res = await fetch('http://127.0.0.1:8000/user', {
+      const res = await fetch('https://auth-testing-five.vercel.app/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // Add this line
@@ -62,7 +62,7 @@ export default function Home() {
   const handleGetUser = async () => {
     setIsLoading(true)
     try {
-      const res = await fetch('http://127.0.0.1:8000/users/92ff0041-eef8-4afd-a913-413076111af9', {
+      const res = await fetch('https://auth-testing-five.vercel.app/users/92ff0041-eef8-4afd-a913-413076111af9', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
